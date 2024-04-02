@@ -8,6 +8,8 @@ import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import TransferWithinAStationIcon from '@mui/icons-material/TransferWithinAStation';
 import ReceiptIcon from '@mui/icons-material/Receipt';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import DashboardIcon from '@mui/icons-material/Dashboard';
+import CategoryIcon from '@mui/icons-material/Category';
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -98,6 +100,18 @@ const Header = () => {
               <AccountBoxIcon />
             </ListItemIcon>
             <ListItemText primary="Mon Compte" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <DashboardIcon />
+            </ListItemIcon>
+            <ListItemText primary="Dashboard" />
+          </ListItem>
+          <ListItem button>
+            <ListItemIcon>
+              <CategoryIcon />
+            </ListItemIcon>
+            <ListItemText primary="Catégorisation d'opérations" />
           </ListItem>
         </List>
       </Drawer>

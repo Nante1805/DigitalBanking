@@ -10,6 +10,8 @@ import Layout from "./components/Layout";
 import RegistrationPage from "./pages/SignUp";
 import HomePage from "./pages/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DashboardPage from "./pages/DashboardPage";
+import CategorizationPage from "./pages/handleCategorize ";
 
 function App() {
   const [accounts, setAccounts] = useState([]);
@@ -46,6 +48,9 @@ function App() {
         <Route path="/FundDeposit" element={<Layout><FundDeposit /></Layout>} />
         <Route path="/Transfer" element={<Layout><Transfer /></Layout>} />
         <Route path="/AccountStatements" element={<Layout><AccountStatements /></Layout>} />
+        <Route path="/DashboardPage" element={<Layout><DashboardPage /></Layout>} />
+        <Route path="/CategorizationPage" element={<Layout><CategorizationPage /></Layout>} />
+        <Route path="/AccountForm" element={<Layout><AccountForm /></Layout>} />
       </Routes>
     </BrowserRouter>
   );
