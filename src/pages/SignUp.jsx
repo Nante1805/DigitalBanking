@@ -1,5 +1,12 @@
 import React, { useState } from 'react';
-import { TextField, Button, Container, Grid, Typography } from '@mui/material';
+import {
+  TextField,
+  Button,
+  Container,
+  Grid,
+  Typography,
+  Box,
+} from '@mui/material';
 
 const RegistrationPage = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +24,7 @@ const RegistrationPage = () => {
 
   const handleSave = () => {
     // Enregistrer les données côté backend et générer un numéro de compte unique
-    const generatedAccountNumber = generateAccountNumber(); // Fonction pour générer un numéro de compte
+    const generatedAccountNumber = generateAccountNumber(); // Function for generating a unique account number
     setAccountNumber(generatedAccountNumber);
     console.log('Données enregistrées:', formData);
     console.log('Numéro de compte unique généré:', generatedAccountNumber);
@@ -29,10 +36,12 @@ const RegistrationPage = () => {
   };
 
   return (
-    <Container maxWidth="md">
-      <Typography variant="h4" align="center" gutterBottom>
-        Inscription
-      </Typography>
+    <Container maxWidth="sm">
+      <Box sx={{ display: 'flex', justifyContent: 'center', mb: 2 }}>
+        <Typography variant="h4" component="h1" align="center">
+          Inscription
+        </Typography>
+      </Box>
       <Grid container spacing={2}>
         <Grid item xs={12} sm={6}>
           <TextField
@@ -81,7 +90,7 @@ const RegistrationPage = () => {
         </Grid>
       </Grid>
       {accountNumber && (
-        <Typography variant="body1" align="center" style={{ marginTop: '20px' }}>
+        <Typography variant="body1" align="center" sx={{ mt: 2, color: 'green' }}>
           Votre numéro de compte unique est : {accountNumber}
         </Typography>
       )}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from '../components/HeadPage';
+
 import { formStyle, labelStyle, inputStyle, checkboxStyle, submitButtonStyle, accountsContainerStyle, accountStyle, modalContainerStyle, modalStyle } from '../assets/withdrawalForm';
 import ShowRegistrationForm from './ShowRegistration'; 
 function Account({ account, onClick }) {
@@ -153,7 +153,7 @@ function WithdrawalForm() {
 
     return (
         <>
-            <Header />
+            
             <form onSubmit={handleWithdrawal} style={formStyle}>
                 <label htmlFor="account" style={labelStyle}>
                     Select Account:

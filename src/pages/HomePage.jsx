@@ -1,7 +1,7 @@
 import React from "react";
-import { Grid, Typography, Button, Link } from "@mui/material";
+import { Grid, Typography, Button, } from "@mui/material";
 import ArrPlan from "../assets/images/Arriere_plan.jpg";
-
+import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <Grid container sx={{ minHeight: "100vh", backgroundColor: "#f9f9f9" }}>
