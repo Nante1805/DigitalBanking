@@ -1,4 +1,5 @@
 import React from 'react';
+import { Grid, Card, CardContent, Typography } from '@mui/material'; // Importez Grid depuis Material-UI
 
 import { BarChart, Bar, XAxis, YAxis, Tooltip, Legend, PieChart, Pie, Cell } from 'recharts';
 

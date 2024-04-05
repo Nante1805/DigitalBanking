@@ -10,7 +10,7 @@ import ReceiptIcon from '@mui/icons-material/Receipt';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import CategoryIcon from '@mui/icons-material/Category';
-
+import { Link } from "react-router-dom";
 const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [isLeftSectionOpen, setIsLeftSectionOpen] = useState(false);
@@ -71,47 +71,63 @@ const Header = () => {
         onClose={handleCloseLeftSection}
       >
         <List>
+          
           <ListItem button>
             <ListItemIcon>
               <AccountBalanceIcon />
             </ListItemIcon>
+            <Link to="/Balance" style={{textDecoration:"none", color:"black"}}>
             <ListItemText primary="Balance" />
+            </Link>
           </ListItem>
+          
           <ListItem button>
             <ListItemIcon>
               <MonetizationOnIcon />
             </ListItemIcon>
-            <ListItemText primary="Faire un dépôt" />
+            <Link to="/AccountStatements" style={{textDecoration:"none", color:"black"}}>
+            <ListItemText primary="Relevés de compte" />
+            </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
               <TransferWithinAStationIcon />
             </ListItemIcon>
+            <Link to="/Transfer" style={{textDecoration:"none", color:"black"}}>
             <ListItemText primary="Faire un transfert" />
+            </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
               <ReceiptIcon />
             </ListItemIcon>
+            <Link to="/AccountStatements" style={{textDecoration:"none", color:"black"}}>
             <ListItemText primary="Relevés de compte" />
+            </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
               <AccountBoxIcon />
             </ListItemIcon>
+            <Link to="/AccountForm" style={{textDecoration:"none", color:"black"}}>
             <ListItemText primary="Mon Compte" />
+            </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
               <DashboardIcon />
             </ListItemIcon>
-            <ListItemText primary="Dashboard" />
+            <Link to="/DashboardPage" style={{textDecoration:"none", color:"black"}}>
+            <ListItemText primary=" Dashboard" />
+            </Link>
           </ListItem>
           <ListItem button>
             <ListItemIcon>
               <CategoryIcon />
             </ListItemIcon>
-            <ListItemText primary="Catégorisation d'opérations" />
+            <Link to="/CategorizationPage" style={{textDecoration:"none", color:"black"}}>
+            <ListItemText primary=" Catégorisation d'opérations" />
+            </Link>
           </ListItem>
         </List>
       </Drawer>
